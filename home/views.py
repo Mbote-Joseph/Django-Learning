@@ -7,3 +7,6 @@ def home(request):
 
 def about(request):
     return HttpResponse("Welcome to Django! About Page")
+
+def contact(request):
+    return HttpResponse("Please enter your email address.")
