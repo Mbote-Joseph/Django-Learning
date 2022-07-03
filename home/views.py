@@ -10,3 +10,7 @@ def about(request):
 
 def contact(request):
     return HttpResponse("Please enter your email address.")
+
+
+def email(request):
+    return HttpResponse("Thank you for your email.")
