@@ -1,6 +1,11 @@
+from cmath import log
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
+from django.contrib.auth.decorators import login_required
+
+
+
 
 # Create your views here.
 # def home(request):
@@ -17,6 +22,9 @@ def contact(request):
     return render(request, 'home/contact.html', {'today': datetime.today()})
 
 
+@login_required(login_url='/admin')
+def authorized(request):
+    return render(request, 'home/authorized.html', {'today': datetime.today()})
 
 
 

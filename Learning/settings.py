@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # Apps Created
     'home',
+    'notes'
 
 ]
 
