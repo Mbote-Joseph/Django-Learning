@@ -10,6 +10,11 @@ from datetime import datetime
 def home(request):
     return render(request, 'home/welcome.html', {'today': datetime.today()})
 
+def about(request):
+    return render(request, 'home/about.html', {'today': datetime.today()}) 
+
+def contact(request):
+    return render(request, 'home/contact.html', {'today': datetime.today()})
 
 
 
