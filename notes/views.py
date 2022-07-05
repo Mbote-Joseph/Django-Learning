@@ -6,7 +6,7 @@ from django.http import Http404
 # For class based Views
 from django.views.generic import TemplateView, CreateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
-
+from .forms import NotesForm
 from .models import Notes
 
 # Create your views here.
@@ -43,6 +43,6 @@ class AuthView(LoginRequiredMixin ,TemplateView):
 
 class NotesCreateView(CreateView):
     model = Notes
-    fields = ['title', 'text']
     success_url = '/list'
+    form_class = NotesForm
     
