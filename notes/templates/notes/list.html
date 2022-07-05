@@ -36,12 +36,13 @@
     <ul>
         <!-- Django Template Language (DTL) Logic -->
       {% for note in notes %}
-      <div class="card" style="margin-top: 30px ;">
+      <div class="card" style="margin-bottom: 30px ;">
         <div class="card-header">
             <h3>{{note.title}}</h3>
         </div>
         <div class="card-body">
           <h5 class="card-title"><li>{{note.text}}</li></h5>
+          <p class="card-title"><li>{{note.text | truncatechars:10}}</li></p>
           <p class="card-text"><li>{{note.created_at}}</li></p>
           <a href="notes/{{note.pk}}" class="btn btn-primary">{{note.title}} </a>
         </div>

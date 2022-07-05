@@ -4,7 +4,7 @@ from datetime import datetime
 from django.http import Http404
 
 # For class based Views
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, CreateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Notes
@@ -41,3 +41,8 @@ class AuthView(LoginRequiredMixin ,TemplateView):
         context['today'] = datetime.today()
         return context
 
+class NotesCreateView(CreateView):
+    model = Notes
+    fields = ['title', 'text']
+    success_url = '/list'
+    

@@ -22,4 +22,5 @@ urlpatterns = [
     path('notes/<int:pk>', views.detail, name='detail'),
     path('testing', views.HomeView.as_view(), name='testing'),
     path('authTest', views.AuthView.as_view(), name='authTest'),
+    path('notes/new', views.NotesCreateView.as_view(), name='notes.new'),
 ]
