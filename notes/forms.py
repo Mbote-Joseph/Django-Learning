@@ -24,6 +24,10 @@ class NotesForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'text': forms.Textarea(attrs={'class': 'form-control'}),
         }
+        labels = {
+            'title': 'Title',
+            'text': 'Message',
+        }
         
     def clean_title(self):
         title = self.cleaned_data['title']
