@@ -17,4 +17,29 @@ nav {
   display: flex;
   justify-content: space-between;
   background: #ee6e73;
+  color: #fff;
+  padding: 20px;
+  min-width: 70px;
+  text-align: center;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+  margin-left: 20px;
+}
+footer {
+  background: #ee6e73;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
 }

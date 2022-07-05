@@ -20,5 +20,6 @@ urlpatterns = [
     path('home', views.home, name='home'),
     path('list', views.list, name='list'),
     path('notes/<int:pk>', views.detail, name='detail'),
-    
+    path('testing', views.HomeView.as_view(), name='testing'),
+    path('authTest', views.AuthView.as_view(), name='authTest'),
 ]

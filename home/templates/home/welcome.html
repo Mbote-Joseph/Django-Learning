@@ -13,6 +13,7 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,40 +27,9 @@
       crossorigin="anonymous"
     />
     <title>Welcome Page</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
   </head>
   <body>
-    <style>
-      nav {
-        display: flex;
-        justify-content: space-between;
-        background: #ee6e73;
-        color: #fff;
-        padding: 20px;
-        min-width: 70px;
-        text-align: center;
-      }
-      nav ul {
-        display: flex;
-        justify-content: space-between;
-      }
-      a {
-        color: #fff;
-        text-decoration: none;
-      }
-      li {
-        list-style: none;
-        margin-left: 20px;
-      }
-      footer {
-        background: #ee6e73;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-        position: absolute;
-        bottom: 0%;
-        width: 100%;
-      }
-    </style>
     <nav>
       <h1>Django Template learning</h1>
 
@@ -67,6 +37,7 @@
         <li><a href="home">Home</a></li>
         <li><a href="about">About</a></li>
         <li><a href="contact">Contact</a></li>
+        <li><a href="list">Lists</a></li>
         <li><a href="admin">Admin</a></li>
       </ul>
     </nav>
