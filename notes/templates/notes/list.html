@@ -83,11 +83,12 @@
         <li><a href="admin">Admin</a></li>
       </ul>
     </nav>
-
+    <div class="container">
     <h1>List of Notes</h1>
     
     
     <ul>
+        <!-- Django Template Language (DTL) Logic -->
       {% for note in notes %}
       <div class="card" style="margin-top: 30px ;">
         <div class="card-header">
@@ -102,6 +103,7 @@
         
         
       {% endfor %}
+    </div>
     <footer>
       <h5>{{today}}</h5>
     </footer>
