@@ -4,7 +4,8 @@ from datetime import datetime
 from django.http import Http404
 
 # For class based Views
-from django.views.generic import TemplateView, CreateView, DeleteView, UpdateView
+from django.views.generic import TemplateView, CreateView, UpdateView
+from django.views.generic.edit import DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import NotesForm
 from .models import Notes
@@ -51,3 +52,8 @@ class NotesUpdateView(UpdateView):
     success_url = '/list'
     form_class = NotesForm
     
+class NotesDeleteView(DeleteView):
+    model = Notes
+    success_url = '/list'
+    def get_object(self):
+        return Notes.objects.get(pk=self.kwargs['pk'])

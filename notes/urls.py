@@ -19,9 +19,11 @@ from . import views
 urlpatterns = [
     path('home', views.home, name='home'),
     path('list', views.list, name='list'),
+    # path('list', views.NotesListView.as_view(), name='list'),
     path('notes/<int:pk>', views.detail, name='detail'),
     path('testing', views.HomeView.as_view(), name='testing'),
     path('authTest', views.AuthView.as_view(), name='authTest'),
     path('notes/new', views.NotesCreateView.as_view(), name='notes.new'),
     path('notes/<int:pk>/edit', views.NotesUpdateView.as_view(), name='notes.edit'),
+    path('notes/<int:pk>/delete', views.NotesDeleteView.as_view(), name='notes.delete'),
 ]
