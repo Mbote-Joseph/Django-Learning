@@ -15,12 +15,14 @@
 -->
 {% extends "base.html" %} {% block content %}
 <div class="container">
-  <form action="{%url 'notes.new' %}" method="POST">
+  <form method="POST">
     {% csrf_token %} {{form}}
     <button type="submit" name="submit" class="btn btn-primary">Submit</button>
   </form>
   {% if form.errors %}
   <div class="alert alert-danger my-4">{{form.errors.title.as_text}}</div>
   {% endif %}
+
+  <a href="{% url 'list' %}" class="btn btn-warning my-5">Cancel </a>
 </div>
 {% endblock %}

@@ -4,7 +4,7 @@ from datetime import datetime
 from django.http import Http404
 
 # For class based Views
-from django.views.generic import TemplateView, CreateView, DeleteView
+from django.views.generic import TemplateView, CreateView, DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import NotesForm
 from .models import Notes
@@ -42,6 +42,11 @@ class AuthView(LoginRequiredMixin ,TemplateView):
         return context
 
 class NotesCreateView(CreateView):
+    model = Notes
+    success_url = '/list'
+    form_class = NotesForm
+
+class NotesUpdateView(UpdateView):
     model = Notes
     success_url = '/list'
     form_class = NotesForm
